@@ -39,19 +39,19 @@
           </div>
           <!-- /.card-header -->
           <div class="card-body">
-            <form action="{{ url('/isp/update') }}" method="POST" enctype="multipart/form-data">
+            <form action="{{ url('/isp/update_isp') }}/{{$produk->id}}" method="POST" enctype="multipart/form-data">
               @csrf
             <div class="row">
               <div class="col-md-6">
                 <div class="form-group">
                   <label>Nama ISP</label>
-                  <input type="text" name="nama_isp" class="form-control" placeholder="Nama ISP" value="{{ $isp->nama_isp }}">
+                  <input type="text" name="nama_produk" class="form-control" placeholder="Nama ISP" value="{{ $produk->nama_produk }}">
                 </div>
                 <!-- /.form-group -->
                 <div class="form-group">
                   <label>Deskripsi</label>
                   <textarea class="form-control" name="deskripsi" rows="3">
-                    {{ $isp->deskripsi }}
+                    {{ $produk->deskripsi }}
                 </textarea>
                 </div>
                 <!-- /.form-group -->
@@ -60,13 +60,13 @@
               <div class="col-md-6">
                 <div class="form-group">
                     <label>Profile</label>
-                    <input type="file" class="form-control" name="image" id="image" value="{{ $isp->image }}">
+                    <input type="file" class="form-control" name="image" id="image" value="{{ $produk->image }}">
                   </div>
                 <!-- /.form-group -->
                 <div class="form-group">
-                  <label>Fungsi</label>
-                  <textarea class="form-control" name="fungsi" rows="3">
-                    {{ $isp->fungsi }}
+                  <label>Spesifikasi</label>
+                  <textarea class="form-control" name="spesifikasi" rows="3">
+                    {{ $produk->spesifikasi }}
                   </textarea>
                 </div>
               </div>

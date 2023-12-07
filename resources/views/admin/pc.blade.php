@@ -31,7 +31,7 @@
               </div>
               <!-- /.card-header -->
               <div class="card-body">
-                <a href="{{ url('/pc/create') }}" class="btn btn-success mb-3"><i class="fa-solid fa-plus mr-2"></i>TAMBAH
+                <a href="{{ url('/pc/create_pc') }}" class="btn btn-success mb-3"><i class="fa-solid fa-plus mr-2"></i>TAMBAH
                 DATA</a>
                 <table id="example2" class="table table-bordered table-hover">
                   <thead>
@@ -45,20 +45,20 @@
                   </tr>
                   </thead>
                   <tbody>
-                      @foreach ($pc as $item)
+                      @foreach ($products_pc as $item)
                   <tr>
                     <td class="text-center">{{ $loop->iteration }}</td>
-                    <td>{{ $item->nama_komputer }}</td>
+                    <td>{{ $item->nama_produk }}</td>
                     <td style="font-size: 15px">{{ Str::limit($item->deskripsi, 20) }}</td>
-                    <td style="font-size: 15px">{{ Str::limit($item->fungsi, 20) }}</td>
+                    <td style="font-size: 15px">{{ Str::limit($item->spesifikasi, 20) }}</td>
                     <td class="text-center"><img src="{{ asset('storage/' . $item->image) }}" width="70px" alt=""></td>
                     <td class="text-center">
-                      <a href="{{ url('/pc/edit-pc') }}/{{ $item->id }}">
+                      <a href="{{ url('/pc/edit_pc') }}/{{ $item->id }}">
                         <button type="button" class="btn btn-primary"><i class="fa-solid fa-pencil m-2"></i></button></a>
-                        <a href="{{ url('/pc/hapus') }}/{{ $item->id }}">
+                        <a href="{{ url('/pc/hapus_pc') }}/{{ $item->id }}">
                         <button type="button" class="btn btn-danger"><i class="fa-solid fa-trash m-2"></i></button>
                       </a> 
-                        <a href="{{ url('/pc/detail') }}/{{ $item->id }}">
+                        <a href="{{ url('/pc/detail_pc') }}/{{ $item->id }}">
                         <button type="button" class="btn btn-success"><i class="fa-regular fa-bookmark m-2"></i></button>
                       </a> 
                   </td>

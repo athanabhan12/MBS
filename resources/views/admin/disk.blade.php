@@ -31,7 +31,7 @@
               </div>
               <!-- /.card-header -->
               <div class="card-body">
-                <a href="{{ url('/disk/create') }}" class="btn btn-success mb-3"><i class="fa-solid fa-plus mr-2"></i>TAMBAH
+                <a href="{{ url('/disk/create_disk') }}" class="btn btn-success mb-3"><i class="fa-solid fa-plus mr-2"></i>TAMBAH
                 DATA</a>
                 <table id="example2" class="table table-bordered table-hover">
                   <thead>
@@ -39,26 +39,26 @@
                     <th>No</th>
                     <th>Nama Storage</th>
                     <th>Deskripsi</th>
-                    <th>Fungsi</th>
+                    <th>Spesifikasi</th>
                     <th>Gambar</th>
                     <th class="text-center">ACTION</th>
                   </tr>
                   </thead>
                   <tbody>
-                      @foreach ($disk as $item)
+                      @foreach ($products_disk as $item)
                   <tr>
                     <td class="text-center">{{ $loop->iteration }}</td>
-                    <td>{{ $item->nama_disk }}</td>
+                    <td>{{ $item->nama_produk }}</td>
                     <td style="font-size: 15px">{{ Str::limit($item->deskripsi, 20) }}</td>
-                    <td style="font-size: 15px">{{ Str::limit($item->fungsi, 20) }}</td>
+                    <td style="font-size: 15px">{{ Str::limit($item->spesifikasi, 20) }}</td>
                     <td class="text-center"><img src="{{ asset('storage/' . $item->image) }}" width="70px" alt=""></td>
                     <td class="text-center">
-                      <a href="{{ url('/disk/edit-disk') }}/{{ $item->id }}">
+                      <a href="{{ url('/disk/edit_disk') }}/{{ $item->id }}">
                         <button type="button" class="btn btn-primary"><i class="fa-solid fa-pencil m-2"></i></button></a>
-                        <a href="{{ url('/disk/hapus') }}/{{ $item->id }}">
+                        <a href="{{ url('/disk/hapus_disk') }}/{{ $item->id }}">
                         <button type="button" class="btn btn-danger"><i class="fa-solid fa-trash m-2"></i></button>
                       </a> 
-                        <a href="{{ url('/disk/detail') }}/{{ $item->id }}">
+                        <a href="{{ url('/disk/detail_disk') }}/{{ $item->id }}">
                         <button type="button" class="btn btn-success"><i class="fa-regular fa-bookmark m-2"></i></button>
                       </a> 
                   </td>
@@ -69,7 +69,7 @@
                     <th>No</th>
                     <th>Nama Storage</th>
                     <th>Deskripsi</th>
-                    <th>Fungsi</th>
+                    <th>Spesifikasi</th>
                     <th>Gambar</th>
                     <th class="text-center">ACTION</th>
                   </tr>

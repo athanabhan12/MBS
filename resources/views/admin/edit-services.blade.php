@@ -39,19 +39,19 @@
           </div>
           <!-- /.card-header -->
           <div class="card-body">
-            <form action="{{ url('/services/store') }}" method="POST" enctype="multipart/form-data">
+            <form action="{{ url('/services/update_services') }}/{{ $produk->id }}" method="POST" enctype="multipart/form-data">
               @csrf
             <div class="row">
               <div class="col-md-6">
                 <div class="form-group">
-                  <label>Nama Services</label>
-                  <input type="text" name="nama_services" class="form-control" placeholder="Nama Services" value="{{ $services->nama_services }}">
+                  <label>Nama Produk</label>
+                  <input type="text" name="nama_produk" class="form-control" value="{{ $produk->nama_produk }}">
                 </div>
                 <!-- /.form-group -->
                 <div class="form-group">
                   <label>Deskripsi</label>
-                  <textarea class="form-control" name="deskripsi" rows="3">
-                    {{ $services->deskripsi }}
+                  <textarea class="form-control" name="deskripsi" rows="5" id="deskripsi">
+                    {{ $produk->deskripsi }}
                 </textarea>
                 </div>
                 <!-- /.form-group -->
@@ -59,21 +59,21 @@
               <!-- /.col -->
               <div class="col-md-6">
                 <div class="form-group">
-                    <label>Profile</label>
-                    <input type="file" class="form-control" name="image" id="image" value="{{ $services->image }}">
+                    <label>Gambar</label>
+                    <input type="file" class="form-control" name="image" id="image" value="{{ $produk->image }}">
                   </div>
                 <!-- /.form-group -->
                 <div class="form-group">
-                  <label>Fungsi</label>
-                  <textarea class="form-control" name="fungsi" rows="3">
-                    {{ $services->fungsi }}
+                  <label>Spesifikasi</label>
+                  <textarea class="form-control" name="spesifikasi" rows="5">
+                    {{ $produk->spesifikasi }}
                   </textarea>
                 </div>
               </div>
               <div class="float-right mt-3">
                 <button type="submit" class="btn btn-primary rounded-pill">Simpan</button>
             </form>
-            <a href="{{ route('admin/services') }}">
+            <a href="{{ route('admin/cctv') }}">
                 <button type="button" class="btn btn-danger rounded-pill">Kembali</button>
             </a>
         </div>

@@ -34,7 +34,7 @@
                     <a href=""><i class="bi bi-twitter"></i></a>
                     <a href=""><i class="bi bi-facebook"></i></a>
                     <a href="https://www.instagram.com/a__sopyan/"><i class="bi bi-instagram"></i></a>
-                    <a href="whatsapp://send?text=Halo mbsonline.id, saya tertarik dengan produk/services : ...&phone=+6285314930607"><i class="bi bi-whatsapp"></i></a>
+                    <a href="whatsapp://send?text=Halo mbsonline.id, saya tertarik dengan produk/services : ...&phone=+62{{$item->whatsapp}}"><i class="bi bi-whatsapp"></i></a>
                   </div>
                 </div>
               </div>
@@ -116,11 +116,9 @@
           <h2>Platform Partnership</h2>
           <div class="clients-slider swiper" data-aos="fade-up" data-aos-delay="100">
           <div class="swiper-wrapper align-items-center">
-            <div class="swiper-slide"><a href=""><img src="assets/img/clients/ecatalog.png" class="img-fluid" alt=""></a></div>
-            <div class="swiper-slide"><a href=""><img src="assets/img/clients/MBIZ.jpg" class="img-fluid" alt=""></a></div>
-            <div class="swiper-slide"><a href=""><img src="assets/img/clients/siplah1.png" class="img-fluid" alt="" ></a></div>
-            <div class="swiper-slide"><a href=""><img src="assets/img/clients/simpel.png" class="img-fluid" alt=""></a></div>
-            <div class="swiper-slide"><a href=""><img src="assets/img/clients/LPSE.jpg" class="img-fluid" alt=""></a></div>  
+            @foreach($partner as $item)
+            <div class="swiper-slide"><a href=""><img src="{{ asset('storage/' . $item->gambar) }}" alt=""></a></div>  
+            @endforeach 
           </div>
           <div class="swiper-pagination"></div>
         </div>
@@ -172,7 +170,7 @@
               <ul style="margin-right: 10px;">
                 @foreach($education as $item)
 
-                  <li>{{ $item->nama_education }}</li>
+                  <li>{{ $item->nama_klien }}</li>
 
                 @endforeach
               </ul>
@@ -182,7 +180,7 @@
               <ul style="margin-right: 10px;">
                 @foreach($fb as $item)
 
-                  <li>{{ $item->nama_finance }}</li>
+                  <li>{{ $item->nama_klien }}</li>
 
                 @endforeach  
               </ul>
@@ -192,7 +190,7 @@
             <ul style="margin-right: 10px;">
                 @foreach($goverment as $item)
 
-                <li>{{ $item->nama_goverment }}</li>
+                <li>{{ $item->nama_klien }}</li>
 
                 @endforeach
               </ul>
@@ -200,7 +198,7 @@
               <ul style="margin-right: 10px;">
                 @foreach($hospital as $item)
                 <li>
-                    {{ $item->nama_hospital }}
+                    {{ $item->nama_klien }}
                 </li>
                 @endforeach
               </ul>
@@ -208,9 +206,9 @@
         <div class="col-lg-3 col-md-6 portfolio-item filter-app">
           <span style="font-weight: bold; font-size: 125%; color: #8c8c8c;">Non Goverment :</span>
           <ul style="margin-right: 10px;">
-            @foreach($nongoverment as $item)
+            @foreach($non_goverment as $item)
 
-            <li>{{ $item->nama_nongoverment }}</li>
+            <li>{{ $item->nama_klien }}</li>
 
             @endforeach
           </ul>

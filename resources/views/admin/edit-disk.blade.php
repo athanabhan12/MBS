@@ -39,19 +39,19 @@
           </div>
           <!-- /.card-header -->
           <div class="card-body">
-            <form action="{{ url('/disk/update') }}" method="POST" enctype="multipart/form-data">
+            <form action="{{ url('/disk/update_disk') }}/{{$produk->id}}" method="POST" enctype="multipart/form-data">
               @csrf
             <div class="row">
               <div class="col-md-6">
                 <div class="form-group">
                   <label>Nama Storage</label>
-                  <input type="text" name="nama_disk" class="form-control" placeholder="Nama Storage" value="{{ $disk->nama_disk }}">
+                  <input type="text" name="nama_produk" class="form-control" placeholder="Nama Storage" value="{{ $produk->nama_produk }}">
                 </div>
                 <!-- /.form-group -->
                 <div class="form-group">
                   <label>Deskripsi</label>
                   <textarea class="form-control" name="deskripsi" rows="3">
-                    {{ $disk->deskripsi }}
+                    {{ $produk->deskripsi }}
                 </textarea>
                 </div>
                 <!-- /.form-group -->
@@ -60,13 +60,13 @@
               <div class="col-md-6">
                 <div class="form-group">
                     <label>Gambar Produk</label>
-                    <input type="file" class="form-control" name="image" id="image" value="{{ $disk->image }}">
+                    <input type="file" class="form-control" name="image" id="image" value="{{ $produk->image }}">
                   </div>
                 <!-- /.form-group -->
                 <div class="form-group">
-                  <label>Fungsi</label>
-                  <textarea class="form-control" name="fungsi" rows="3">
-                    {{ $disk->fungsi }}
+                  <label>Spesifikasi</label>
+                  <textarea class="form-control" name="spesifikasi" rows="3">
+                    {{ $produk->spesifikasi }}
                   </textarea>
                 </div>
               </div>

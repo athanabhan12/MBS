@@ -8,7 +8,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Tambah Data Produk (Printer)</h1>
+            <h1>Ubah Data Produk (Printer)</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -26,7 +26,7 @@
         <!-- SELECT2 EXAMPLE -->
         <div class="card card-default">
           <div class="card-header">
-            <h3 class="card-title">Tambah Data Produk (Printer)</h3>
+            <h3 class="card-title">Ubah Data Produk (Printer)</h3>
 
             <div class="card-tools">
               <button type="button" class="btn btn-tool" data-card-widget="collapse">
@@ -39,19 +39,19 @@
           </div>
           <!-- /.card-header -->
           <div class="card-body">
-            <form action="{{ url('/pc/store') }}" method="POST" enctype="multipart/form-data">
+            <form action="{{ url('/printer/update_printer') }}/{{ ($produk->id) }}" method="POST" enctype="multipart/form-data">
               @csrf
             <div class="row">
               <div class="col-md-6">
                 <div class="form-group">
                   <label>Nama Printer</label>
-                  <input type="text" name="nama_printer" class="form-control" placeholder="Nama Printer" value="{{ $printer->nama_printer }}">
+                  <input type="text" name="nama_produk" class="form-control" value="{{ $produk->nama_produk }}">
                 </div>
                 <!-- /.form-group -->
                 <div class="form-group">
                   <label>Deskripsi</label>
-                  <textarea class="form-control" name="deskripsi" rows="3">
-                    {{ $printer->deskripsi }}
+                  <textarea class="form-control" name="deskripsi" rows="5">
+                    {{ $produk->deskripsi }}
                 </textarea>
                 </div>
                 <!-- /.form-group -->
@@ -60,13 +60,13 @@
               <div class="col-md-6">
                 <div class="form-group">
                     <label>Profile</label>
-                    <input type="file" class="form-control" name="image" id="image" value="{{ $printer->image }}">
+                    <input type="file" class="form-control" name="image" id="image" value="{{ $produk->image }}">
                   </div>
                 <!-- /.form-group -->
                 <div class="form-group">
-                  <label>Fungsi</label>
-                  <textarea class="form-control" name="fungsi" rows="3">
-                    {{ $printer->fungsi }}
+                  <label>Spesifikasi</label>
+                  <textarea class="form-control" name="spesifikasi" rows="5">
+                    {{ $produk->spesifikasi }}
                   </textarea>
                 </div>
               </div>

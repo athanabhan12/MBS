@@ -8,7 +8,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Table Team MBS</h1>
+            <h1>Table Partnership MBS</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -27,21 +27,18 @@
           <div class="col-12">
             <div class="card">
               <div class="card-header">
-                <h3 class="card-title">Table Team MBS</h3>
+                <h3 class="card-title">Table Partnership MBS</h3>
               </div>
               <!-- /.card-header -->
               <div class="card-body">
-                <a href="{{ url('/team/create') }}" class="btn btn-success mb-3"><i class="fa-solid fa-plus mr-2"></i>TAMBAH
+                <a href="{{ url('/partner/create_partner') }}" class="btn btn-success mb-3"><i class="fa-solid fa-plus mr-2"></i>TAMBAH
                 DATA</a>
                 <table id="example2" class="table table-bordered table-hover">
                   <thead>
                   <tr>
-                    <th>No</th>
-                    <th>Nama</th>
-                    <th>Jabatan</th>
-                    <th>Whatsapp</th>
-                    <th>Instagram</th>
-                    <th>Profile</th>
+                    <th class="text-center">No</th>
+                    <th class="text-center">Nama Partner</th>
+                    <th class="text-center">Gambar</th>
                     <th class="text-center">ACTION</th>
                   </tr>
                   </thead>
@@ -49,31 +46,20 @@
                       @foreach ($partners as $item)
                   <tr>
                     <td class="text-center">{{ $loop->iteration }}</td>
-                    <td>{{ $item->nama }}</td>
-                    <td>{{ $item->jabatan }}</td>
-                    <td>{{ $item->whatsapp }}</td>
-                    <td>{{ $item->instagram }}</td>
-                    <td class="text-center">{{ $item->profile }}</td>
+                    <td>{{ $item->nama_partner }}</td>
+                    <td class="text-center"><img src="{{ asset('storage/' . $item->gambar) }}" width="70px" alt=""></td>
                     <td class="text-center">
-                      <a href="{{ url('/team/edit-team') }}/{{ $item->id }}">
-                        <button type="button" class="btn btn-primary">Edit</button></a>
-                        <a href="{{ url('/team/hapus') }}/{{ $item->id }}">
-                        <button type="button" class="btn btn-danger">Delete</button>
-                      </a> 
-                        <a href="{{ url('/team/detail') }}/{{ $item->id }}">
-                        <button type="button" class="btn btn-success">Detail</button>
-                      </a> 
+                      <a href="{{ url('/team/edit_partner') }}/{{ $item->id }}">
+                        <button type="button" class="btn btn-primary">Edit</button>
+                      </a>
                   </td>
                   </tr>
                   @endforeach
                   <tfoot>
                   <tr>
-                    <th>No</th>
-                    <th>Nama</th>
-                    <th>Jabatan</th>
-                    <th>Whatsapp</th>
-                    <th>Instagram</th>
-                    <th>Profile</th>
+                    <th class="text-center">No</th>
+                    <th class="text-center">Nama Partner</th>
+                    <th class="text-center">Gambar</th>
                     <th class="text-center">ACTION</th>
                   </tr>
                 </tbody>

@@ -68,15 +68,15 @@
               </div>
               <div class="col-md-12">
                 <div class="form-group">
-                  <label>Profile</label>
+                  <label>Foto Profile</label>
                   <input type="file" class="form-control" name="image" id="image">
                 </div>
               </div>
               <div class="float-right mt-3">
                 <button type="submit" class="btn btn-primary rounded-pill">Simpan</button>
-              </div>
-            </form>
-            <button type="button" class="btn btn-danger rounded-pill">Kembali</button>
+              </form>
+              <button type="button" class="btn btn-danger rounded-pill">Kembali</button>
+            </div>
             </div>
           </div>
         </div>

@@ -39,19 +39,19 @@
           </div>
           <!-- /.card-header -->
           <div class="card-body">
-            <form action="{{ url('/cctv/store') }}" method="POST" enctype="multipart/form-data">
+            <form action="{{ url('/cctv/update_cctv') }}/{{ $produk->id }}" method="POST" enctype="multipart/form-data">
               @csrf
             <div class="row">
               <div class="col-md-6">
                 <div class="form-group">
-                  <label>Nama CCTV</label>
-                  <input type="text" name="nama_cctv" class="form-control" placeholder="Nama CCTV" value="{{ $cctv->nama_cctv }}">
+                  <label>Nama Produk</label>
+                  <input type="text" name="nama_produk" class="form-control" value="{{ $produk->nama_produk }}">
                 </div>
                 <!-- /.form-group -->
                 <div class="form-group">
                   <label>Deskripsi</label>
                   <textarea class="form-control" name="deskripsi" rows="5" id="deskripsi">
-                    {{ $cctv->deskripsi }}
+                    {{ $produk->deskripsi }}
                 </textarea>
                 </div>
                 <!-- /.form-group -->
@@ -59,14 +59,14 @@
               <!-- /.col -->
               <div class="col-md-6">
                 <div class="form-group">
-                    <label>Profile</label>
-                    <input type="file" class="form-control" name="image" id="image" value="{{ $cctv->image }}">
+                    <label>Gambar</label>
+                    <input type="file" class="form-control" name="image" id="image" value="{{ $produk->image }}">
                   </div>
                 <!-- /.form-group -->
                 <div class="form-group">
-                  <label>Fungsi</label>
-                  <textarea class="form-control" name="fungsi" rows="5">
-                    {{ $cctv->fungsi }}
+                  <label>Spesifikasi</label>
+                  <textarea class="form-control" name="spesifikasi" rows="5">
+                    {{ $produk->spesifikasi }}
                   </textarea>
                 </div>
               </div>

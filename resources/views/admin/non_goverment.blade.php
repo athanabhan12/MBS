@@ -31,35 +31,38 @@
               </div>
               <!-- /.card-header -->
               <div class="card-body">
-                <a href="{{ url('/non_goverment/create') }}" class="btn btn-success mb-3"><i class="fa-solid fa-plus mr-2"></i>TAMBAH
+                <a href="{{ url('/non_goverment/create_non_goverment') }}" class="btn btn-success mb-3"><i class="fa-solid fa-plus mr-2"></i>TAMBAH
                 DATA</a>
                 <table id="example2" class="table table-bordered table-hover">
                   <thead>
                   <tr>
-                    <th>No</th>
-                    <th>Nama Client</th>
-                    <th>Alamat</th>
+                    <th class="text-center">No</th>
+                    <th class="text-center">Nama Client</th>
+                    <th class="text-center">Alamat</th>
                     <th class="text-center">ACTION</th>
                   </tr>
                   </thead>
                   <tbody>
-                      @foreach ($nongoverment as $item)
+                      @foreach ($non_goverment as $item)
                   <tr>
                     <td class="text-center">{{ $loop->iteration }}</td>
-                    <td>{{ $item->nama_nongoverment }}</td>
-                    <td>{{ $item->alamat }}</td>
+                    <td>{{ $item->nama_klien }}</td>
+                    <td>{{ Str::limit($item->alamat_klien, 80) }}</td>
                     <td class="text-center">
-                      <a href="{{ url('/non_goverment/edit-non_goverment') }}/{{ $item->id }}">
+                      <a href="{{ url('/non_goverment/edit_non_goverment') }}/{{ $item->id }}">
                         <button type="button" class="btn btn-primary">Edit</button>
+                      </a>
+                      <a href="{{ url('/non_goverment/delete_non_goverment') }}/{{ $item->id }}">
+                        <button type="button" class="btn btn-danger">Hapus</button>
                       </a>
                   </td>
                   </tr>
                   @endforeach
                   <tfoot>
                   <tr>
-                    <th>No</th>
-                    <th>Nama Client</th>
-                    <th>Alamat</th>
+                    <th class="text-center">No</th>
+                    <th class="text-center">Nama Client</th>
+                    <th class="text-center">Alamat</th>
                     <th class="text-center">ACTION</th>
                   </tr>
                 </tbody>

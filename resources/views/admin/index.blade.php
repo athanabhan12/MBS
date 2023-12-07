@@ -21,10 +21,10 @@
         </div>
         <!-- /.content-header -->
 <ul>
-        @foreach ($products as $product)
+        {{-- @foreach ($products as $product)
             <li>{{ $product->nama_produk }}</li>
             <li>{{ $product->categories->category }}</li>
-        @endforeach
+        @endforeach --}}
 </ul>
         <!-- Main content -->
         <section class="content">
@@ -35,7 +35,7 @@
                 <!-- small box -->
                 <div class="small-box bg-info">
                   <div class="inner">
-                    <h3>{{ $teams }}</h3>
+                    <h3>{{ $products_count }}</h3>
     
                     <p>Product</p>
                   </div>
@@ -50,7 +50,7 @@
                 <!-- small box -->
                 <div class="small-box bg-success">
                   <div class="inner">
-                    <h3>53<sup style="font-size: 20px">%</sup></h3>
+                    <h3>53</h3>
     
                     <p>Partner</p>
                   </div>

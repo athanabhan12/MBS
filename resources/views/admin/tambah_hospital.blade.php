@@ -39,23 +39,31 @@
           </div>
           <!-- /.card-header -->
           <div class="card-body">
-            <form action="{{ url('/hospital/store') }}" method="POST" enctype="multipart/form-data">
+            <form action="{{ url('/hospital/store_hospital') }}" method="POST" enctype="multipart/form-data">
               @csrf
             <div class="row">
               <div class="col-md-6">
                 <div class="form-group">
                   <label>Nama Client</label>
-                  <input type="text" name="nama_hospital" class="form-control" placeholder="Nama Client">
+                  <input type="text" name="nama_klien" class="form-control" placeholder="Nama Client">
                 </div>
               </div>
               <!-- /.col -->
               <div class="col-md-6">
                 <div class="form-group">
                   <label>Alamat</label>
-                  <input type="text" class="form-control" name="alamat" placeholder="Alamat">
+                  <input type="text" class="form-control" name="alamat_klien" placeholder="Alamat Clien">
                 </div>
               </div>
               <div class="col-md-12">
+                <div class="form-group">
+                    <label>Jenis Client</label>
+                    <select name="id_tipes" class="form-control">
+                      @foreach ($project as $item)
+                          <option value="{{ $item->id }}">{{ $item->jenis_klien }}</option>
+                      @endforeach
+                    </select>
+                  </div>
               </div>
               <div class="float-right mt-3">
                 <button type="submit" class="btn btn-primary rounded-pill">Simpan</button>

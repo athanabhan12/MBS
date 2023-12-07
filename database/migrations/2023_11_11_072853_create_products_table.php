@@ -15,6 +15,9 @@ return new class extends Migration
             $table->id();
             $table->foreignId('id_categories');
             $table->string('nama_produk');
+            $table->string('image');
+            $table->string('image1');
+            $table->string('image2');
             $table->text('deskripsi');
             $table->text('spesifikasi');
             $table->timestamps();

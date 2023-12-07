@@ -31,14 +31,14 @@
               </div>
               <!-- /.card-header -->
               <div class="card-body">
-                <a href="{{ url('/goverment/create') }}" class="btn btn-success mb-3"><i class="fa-solid fa-plus mr-2"></i>TAMBAH
+                <a href="{{ url('/goverment/create_goverment') }}" class="btn btn-success mb-3"><i class="fa-solid fa-plus mr-2"></i>TAMBAH
                 DATA</a>
                 <table id="example2" class="table table-bordered table-hover">
                   <thead>
                   <tr>
-                    <th>No</th>
-                    <th>Nama Client</th>
-                    <th>Alamat</th>
+                    <th class="text-center">No</th>
+                    <th class="text-center">Nama Client</th>
+                    <th class="text-center">Alamat</th>
                     <th class="text-center">ACTION</th>
                   </tr>
                   </thead>
@@ -46,20 +46,23 @@
                       @foreach ($goverment as $item)
                   <tr>
                     <td class="text-center">{{ $loop->iteration }}</td>
-                    <td>{{ $item->nama_goverment }}</td>
-                    <td>{{ $item->alamat }}</td>
+                    <td>{{ $item->nama_klien }}</td>
+                    <td>{{ $item->alamat_klien }}</td>
                     <td class="text-center">
-                      <a href="{{ url('/goverment/edit-goverment') }}/{{ $item->id }}">
+                      <a href="{{ url('/goverment/edit_goverment') }}/{{ $item->id }}">
                         <button type="button" class="btn btn-primary">Edit</button>
+                      </a>
+                      <a href="{{ url('/goverment/delete_goverment') }}/{{ $item->id }}">
+                        <button type="button" class="btn btn-danger">Hapus</button>
                       </a>
                   </td>
                   </tr>
                   @endforeach
                   <tfoot>
                   <tr>
-                    <th>No</th>
-                    <th>Nama Client</th>
-                    <th>Alamat</th>
+                    <th class="text-center">No</th>
+                    <th class="text-center">Nama Client</th>
+                    <th class="text-center">Alamat</th>
                     <th class="text-center">ACTION</th>
                   </tr>
                 </tbody>

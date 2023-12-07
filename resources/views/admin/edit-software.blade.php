@@ -39,19 +39,19 @@
           </div>
           <!-- /.card-header -->
           <div class="card-body">
-            <form action="{{ url('/software/store') }}" method="POST" enctype="multipart/form-data">
+            <form action="{{ url('/software/update_software') }}/{{ $produk->id }}" method="POST" enctype="multipart/form-data">
               @csrf
             <div class="row">
               <div class="col-md-6">
                 <div class="form-group">
                   <label>Nama Software</label>
-                  <input type="text" name="nama_software" class="form-control" placeholder="Nama Software" value="{{ $software->nama_software }}">
+                  <input type="text" name="nama_produk" class="form-control" placeholder="Nama Software" value="{{ $produk->nama_produk }}">
                 </div>
                 <!-- /.form-group -->
                 <div class="form-group">
                   <label>Deskripsi</label>
                   <textarea class="form-control" name="deskripsi" rows="5" id="deskripsi">
-                    {{ $software->deskripsi }}
+                    {{ $produk->deskripsi }}
                 </textarea>
                 </div>
                 <!-- /.form-group -->
@@ -60,13 +60,13 @@
               <div class="col-md-6">
                 <div class="form-group">
                     <label>Profile</label>
-                    <input type="file" class="form-control" name="image" id="image" value="{{ $software->image }}">
+                    <input type="file" class="form-control" name="image" id="image" value="{{ $produk->image }}">
                   </div>
                 <!-- /.form-group -->
                 <div class="form-group">
-                  <label>Fungsi</label>
-                  <textarea class="form-control" name="fungsi" rows="5">
-                    {{ $software->fungsi }}
+                  <label>Spesifikasi</label>
+                  <textarea class="form-control" name="spesifikasi" rows="5">
+                    {{ $produk->spesifikasi }}
                   </textarea>
                 </div>
               </div>

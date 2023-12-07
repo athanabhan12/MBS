@@ -39,19 +39,19 @@
           </div>
           <!-- /.card-header -->
           <div class="card-body">
-            <form action="{{ url('/san_switch/update') }}" method="POST" enctype="multipart/form-data">
+            <form action="{{ url('/san_switch/update_san_switch') }}/{{$produk->id}}" method="POST" enctype="multipart/form-data">
               @csrf
             <div class="row">
               <div class="col-md-6">
                 <div class="form-group">
                   <label>Nama San Switch</label>
-                  <input type="text" name="nama_san_switch" class="form-control" placeholder="Nama San Switch" value="{{ $san_switch->nama_san_switch }}">
+                  <input type="text" name="nama_produk" class="form-control" placeholder="Nama San Switch" value="{{ $produk->nama_produk }}">
                 </div>
                 <!-- /.form-group -->
                 <div class="form-group">
                   <label>Deskripsi</label>
                   <textarea class="form-control" name="deskripsi" rows="3">
-                    {{ $san_switch->deskripsi }}
+                    {{ $produk->deskripsi }}
                 </textarea>
                 </div>
                 <!-- /.form-group -->
@@ -60,13 +60,13 @@
               <div class="col-md-6">
                 <div class="form-group">
                     <label>Profile</label>
-                    <input type="file" class="form-control" name="image" id="image" value="{{ $san_switch->image }}">
+                    <input type="file" class="form-control" name="image" id="image" value="{{ $produk->image }}">
                   </div>
                 <!-- /.form-group -->
                 <div class="form-group">
-                  <label>Fungsi</label>
-                  <textarea class="form-control" name="fungsi" rows="3">
-                    {{ $san_switch->fungsi }}
+                  <label>Spesifikasi</label>
+                  <textarea class="form-control" name="spesifikasi" rows="3">
+                    {{ $produk->spesifikasi }}
                   </textarea>
                 </div>
               </div>

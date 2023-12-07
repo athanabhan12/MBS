@@ -39,20 +39,20 @@
           </div>
           <!-- /.card-header -->
           <div class="card-body">
-            <form action="{{ url('/education/update') }}/{{ $education->id }}" method="POST">
+            <form action="{{ url('/education/update_education') }}/{{ $project->id }}" method="POST">
               @csrf
             <div class="row">
               <div class="col-md-6">
                 <div class="form-group">
                   <label>Nama Klien</label>
-                  <input type="text" name="nama_education" class="form-control" placeholder="Nama Klien" value="{{ $education->nama_education }}">
+                  <input type="text" name="nama_klien" class="form-control" value="{{ $project->nama_klien }}">
                 </div>
               </div>
               <!-- /.col -->
               <div class="col-md-6">
                 <div class="form-group">
                   <label>Alamat</label>
-                  <input type="text" class="form-control" name="alamat" placeholder="Alamat" value="{{ $education->alamat }}">
+                  <input type="text" class="form-control" name="alamat_klien" value="{{ $project->alamat_klien }}">
                 </div> 
               </div>
               <div class="mt-3">

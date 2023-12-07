@@ -8,7 +8,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Tambah Data Produk (networking)</h1>
+            <h1>Ubah Data Produk (networking)</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -26,7 +26,7 @@
         <!-- SELECT2 EXAMPLE -->
         <div class="card card-default">
           <div class="card-header">
-            <h3 class="card-title">Tambah Data Produk (networking)</h3>
+            <h3 class="card-title">Ubah Data Produk (networking)</h3>
 
             <div class="card-tools">
               <button type="button" class="btn btn-tool" data-card-widget="collapse">
@@ -39,19 +39,19 @@
           </div>
           <!-- /.card-header -->
           <div class="card-body">
-            <form action="{{ url('/networking/store') }}" method="POST" enctype="multipart/form-data">
+            <form action="{{ url('/networking/update_networking') }}/{{ $produk->id }}" method="POST" enctype="multipart/form-data">
               @csrf
             <div class="row">
               <div class="col-md-6">
                 <div class="form-group">
                   <label>Nama Networking</label>
-                  <input type="text" name="nama_network" class="form-control" placeholder="Nama Networking" value="{{ $networking->nama_network }}">
+                  <input type="text" name="nama_produk" class="form-control" placeholder="Nama Networking" value="{{ $produk->nama_produk }}">
                 </div>
                 <!-- /.form-group -->
                 <div class="form-group">
                   <label>Deskripsi</label>
                   <textarea class="form-control" name="deskripsi" rows="5" id="deskripsi">
-                    {{ $networking->deskripsi }}
+                    {{ $produk->deskripsi }}
                 </textarea>
                 </div>
                 <!-- /.form-group -->
@@ -60,13 +60,13 @@
               <div class="col-md-6">
                 <div class="form-group">
                     <label>Profile</label>
-                    <input type="file" class="form-control" name="image" id="image" value="{{ $networking->image }}">
+                    <input type="file" class="form-control" name="image" id="image" value="{{ $produk->image }}">
                   </div>
                 <!-- /.form-group -->
                 <div class="form-group">
-                  <label>Fungsi</label>
-                  <textarea class="form-control" name="fungsi" rows="5">
-                    {{ $networking->fungsi }}
+                  <label>Spesifikasii</label>
+                  <textarea class="form-control" name="spesifikasi" rows="5">
+                    {{ $produk->spesifikasi }}
                   </textarea>
                 </div>
               </div>

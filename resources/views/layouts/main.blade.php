@@ -69,25 +69,27 @@
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto active" href="#beranda">Beranda</a></li>
+          <li><a class="nav-link scrollto" href="#beranda">Beranda</a></li>
           <li><a class="nav-link scrollto" href="#about">Tentang Kami</a></li>
           <li><a class="nav-link scrollto" href="#visidanmisi">Visi & Misi</a></li>
           <li><a class="nav-link scrollto " href="#services">Layanan</a></li>
           <li><a class="nav-link scrollto" href="#portfolio">Project Reference</a></li>
           <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
           <li><a class="nav-link scrollto " href="https://drive.google.com/file/d/1Aey03XTZW2LWmitWmkAf0voGrBwdmTkM/view" target="_blank">Compro</a></li>
-          <li class="dropdown"><a href="{{ route('user/produk') }}"><span>Produk</span> <i class="bi bi-chevron-down"></i></a>
+          <li class="dropdown"><a href="{{ route('user/barang') }}"><span>Produk</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a href="CCTV.html">CCTV</a></li> 
-              <li><a href="laptop.html">Laptop</a></li> 
-              <li><a href="networking.html">Networking</a></li>
-              <li><a href="PC.html">PC</a></li>
-              <li><a href="printer.html">Printer</a></li>
-              <li><a href="security_system.html">Security System</a></li>
-              <li><a href="server.html">Server</a></li>
-              <li><a href="services.html">Services</a></li>
-              <li><a href="software.html">Software</a></li>
-              <li><a href="software.html">ISP</a></li>
+              <li><a href="{{ route('user/cctv_user') }}">CCTV</a></li> 
+              <li><a href="{{ route('user/laptop_user') }}">Laptop</a></li> 
+              <li><a href="{{ route('user/network_user') }}">Networking</a></li>
+              <li><a href="{{ route('user/pc_user') }}">PC</a></li>
+              <li><a href="{{ route('user/printer_user') }}">Printer</a></li>
+              <li><a href="{{ route('user/security_system_user') }}">Security System</a></li>
+              <li><a href="{{ route('user/server_user') }}">Server</a></li>
+              <li><a href="{{ route('user/services_user') }}">Services</a></li>
+              <li><a href="{{ route('user/software_user') }}">Software</a></li>
+              <li><a href="{{ route('user/isp_user') }}">ISP</a></li>
+              <li><a href="{{ route('user/disk_user') }}">Storage</a></li>
+              <li><a href="{{ route('user/san_switch_user') }}">San Switch</a></li>
             </ul>
           </li>
         </ul>

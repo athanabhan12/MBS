@@ -31,7 +31,7 @@
               </div>
               <!-- /.card-header -->
               <div class="card-body">
-                <a href="{{ url('/server/create') }}" class="btn btn-success mb-3"><i class="fa-solid fa-plus mr-2"></i>TAMBAH
+                <a href="{{ url('/server/create_server') }}" class="btn btn-success mb-3"><i class="fa-solid fa-plus mr-2"></i>TAMBAH
                 DATA</a>
                 <table id="example2" class="table table-bordered table-hover">
                   <thead>
@@ -39,26 +39,26 @@
                     <th>No</th>
                     <th>Nama Server</th>
                     <th>Deskripsi</th>
-                    <th>Fungsi</th>
+                    <th>Spesifikasi</th>
                     <th>Gambar</th>
                     <th class="text-center">ACTION</th>
                   </tr>
                   </thead>
                   <tbody>
-                      @foreach ($server as $item)
+                      @foreach ($products_server as $item)
                   <tr>
                     <td class="text-center">{{ $loop->iteration }}</td>
-                    <td>{{ $item->nama_server }}</td>
+                    <td>{{ $item->nama_produk }}</td>
                     <td style="font-size: 15px">{{ Str::limit($item->deskripsi, 20) }}</td>
-                    <td style="font-size: 15px">{{ Str::limit($item->fungsi, 20) }}</td>
+                    <td style="font-size: 15px">{{ Str::limit($item->spesifikasi, 20) }}</td>
                     <td class="text-center"><img src="{{ asset('storage/' . $item->image) }}" width="70px" alt=""></td>
                     <td class="text-center">
-                      <a href="{{ url('/server/edit-server') }}/{{ $item->id }}">
+                      <a href="{{ url('/server/edit_server') }}/{{ $item->id }}">
                         <button type="button" class="btn btn-primary"><i class="fa-solid fa-pencil m-2"></i></button></a>
-                        <a href="{{ url('/server/hapus') }}/{{ $item->id }}">
+                        <a href="{{ url('/server/hapus_server') }}/{{ $item->id }}">
                         <button type="button" class="btn btn-danger"><i class="fa-solid fa-trash m-2"></i></button>
                       </a> 
-                        <a href="{{ url('/server/detail') }}/{{ $item->id }}">
+                        <a href="{{ url('/server/detail_server') }}/{{ $item->id }}">
                         <button type="button" class="btn btn-success"><i class="fa-regular fa-bookmark m-2"></i></button>
                       </a> 
                   </td>
@@ -69,7 +69,7 @@
                     <th>No</th>
                     <th>Nama Server</th>
                     <th>Deskripsi</th>
-                    <th>Fungsi</th>
+                    <th>Spesifikasi</th>
                     <th>Gambar</th>
                     <th class="text-center">ACTION</th>
                   </tr>

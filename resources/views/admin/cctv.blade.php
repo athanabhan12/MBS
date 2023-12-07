@@ -31,7 +31,7 @@
               </div>
               <!-- /.card-header -->
               <div class="card-body">
-                <a href="{{ url('/cctv/create_cctv') }}" class="btn btn-success mb-3"><i class="fa-solid fa-plus mr-2"></i>TAMBAH
+                <a href="{{ url('/cctv/create_cctv') }}" class="btn btn-success mb-3 mt-3"><i class="fa-solid fa-plus mr-2"></i>TAMBAH
                 DATA</a>
                 <table id="example2" class="table table-bordered table-hover">
                   <thead>
@@ -53,12 +53,12 @@
                     <td>{{ Str::limit($item->spesifikasi, 20) }}</td>
                     <td class="text-center"><img src="{{ asset('storage/' . $item->image) }}" width="70px" alt=""></td>
                     <td class="text-center">
-                      <a href="{{ url('/cctv/edit-cctv') }}/{{ $item->id }}">
+                      <a href="{{ url('/cctv/edit_cctv') }}/{{ $item->id }}">
                         <button type="button" class="btn btn-primary"><i class="fa-solid fa-pencil m-2"></i></button></a>
-                        <a href="{{ url('/cctv/hapus') }}/{{ $item->id }}">
+                        <a href="{{ url('/cctv/delete_cctv') }}/{{ $item->id }}">
                         <button type="button" class="btn btn-danger"><i class="fa-solid fa-trash m-2"></i></button>
                       </a> 
-                        <a href="{{ url('/cctv/detail') }}/{{ $item->id }}">
+                        <a href="{{ url('/cctv/detail_cctv') }}/{{ $item->id }}">
                         <button type="button" class="btn btn-success"><i class="fa-regular fa-bookmark m-2"></i></button>
                       </a> 
                   </td>

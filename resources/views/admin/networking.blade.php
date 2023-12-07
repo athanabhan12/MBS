@@ -31,7 +31,7 @@
               </div>
               <!-- /.card-header -->
               <div class="card-body">
-                <a href="{{ url('/networking/create') }}" class="btn btn-success mb-3"><i class="fa-solid fa-plus mr-2"></i>TAMBAH
+                <a href="{{ url('/networking/create_networking') }}" class="btn btn-success mb-3"><i class="fa-solid fa-plus mr-2"></i>TAMBAH
                 DATA</a>
                 <table id="example2" class="table table-bordered table-hover">
                   <thead>
@@ -45,17 +45,17 @@
                   </tr>
                   </thead>
                   <tbody>
-                      @foreach ($networking as $item)
+                      @foreach ($products_networking as $item)
                   <tr>
                     <td class="text-center">{{ $loop->iteration }}</td>
-                    <td>{{ $item->nama_network }}</td>
+                    <td>{{ $item->nama_produk }}</td>
                     <td>{{ $item->deskripsi }}</td>
-                    <td>{{ $item->fungsi }}</td>
+                    <td>{{ $item->spesifikasi }}</td>
                     <td class="text-center"><img src="{{ asset('storage/' . $item->image) }}" width="70px" alt=""></td>
                     <td class="text-center">
-                      <a href="{{ url('/networking/edit-networking') }}/{{ $item->id }}">
+                      <a href="{{ url('/networking/edit_networking') }}/{{ $item->id }}">
                         <button type="button" class="btn btn-primary">Edit</button></a>
-                        <a href="{{ url('/networking/hapus') }}/{{ $item->id }}">
+                        <a href="{{ url('/networking/hapus_networking') }}/{{ $item->id }}">
                         <button type="button" class="btn btn-danger">Delete</button>
                       </a> 
                         <a href="{{ url('/networking/detail') }}/{{ $item->id }}">

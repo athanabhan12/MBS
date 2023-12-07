@@ -39,20 +39,20 @@
           </div>
           <!-- /.card-header -->
           <div class="card-body">
-            <form action="{{ url('/FB/update') }}/{{ $fb->id }}" method="POST">
+            <form action="{{ url('/FB/update_fb') }}/{{ $project->id }}" method="POST">
               @csrf
             <div class="row">
               <div class="col-md-6">
                 <div class="form-group">
                   <label>Nama Klien</label>
-                  <input type="text" name="nama_finance" class="form-control" placeholder="Nama Klien" value="{{ $fb->nama_finance }}">
+                  <input type="text" name="nama_klien" class="form-control" value="{{ $project->nama_klien }}">
                 </div>
               </div>
               <!-- /.col -->
               <div class="col-md-6">
                 <div class="form-group">
                   <label>Alamat</label>
-                  <input type="text" class="form-control" name="alamat" placeholder="Alamat" value="{{ $fb->alamat }}">
+                  <input type="text" class="form-control" name="alamat_klien" value="{{ $project->alamat_klien }}">
                 </div> 
               </div>
               <div class="mt-3">

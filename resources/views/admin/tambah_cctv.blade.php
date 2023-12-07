@@ -57,7 +57,7 @@
               <!-- /.col -->
               <div class="col-md-6">
                 <div class="form-group">
-                    <label>Profile</label>
+                    <label>Gambar 1</label>
                     <input type="file" class="form-control" name="image" id="image">
                   </div>
                 <!-- /.form-group -->
@@ -65,6 +65,30 @@
                   <label>Spesifikasi</label>
                   <textarea class="form-control" name="spesifikasi" rows="5"></textarea>
                 </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                    <label>Gambar 2</label>
+                    <input type="file" class="form-control" name="image1" id="image">
+                  </div>
+                </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                    <label>Gambar 3</label>
+                    <input type="file" class="form-control" name="image2" id="image">
+                  </div>
+                </div>
+              <div class="col-md-12">
+                <div class="form-group">
+                    <label>Kategori Barang</label>
+                    <select name="id_categories" class="form-control">
+                      @foreach ($produk as $item)
+                          <option value="{{ $item->id }}">{{ $item->category }}</option>
+                      @endforeach
+                    </select>
+                  </div>
+              </div>
+              </div>
               </div>
               <div class="float-right mt-3">
                 <button type="submit" class="btn btn-primary rounded-pill">Simpan</button>

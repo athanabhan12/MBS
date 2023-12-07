@@ -45,7 +45,9 @@ class TeamController extends Controller
         $tims->jabatan                           = $request->jabatan;
         $tims->whatsapp                          = $request->whatsapp;
         $tims->instagram                         = $request->instagram;
-        $tims->image                           = $request->image;
+        if($request->file('image')) {
+            $tims['image'] = $request->file('image')->store('post-images');
+        }
 
         $tims->save();
 
