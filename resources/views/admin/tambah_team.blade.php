@@ -8,12 +8,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Tambah Data Team MBS</h1>
+            <h1>Tambah Data Tim MBS</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Advanced Form</li>
+              <li class="breadcrumb-item"><a href="{{ route('admin/index') }}">Home</a></li>
+              <li class="breadcrumb-item active">Tambah Data Tim MBS</li>
             </ol>
           </div>
         </div>
@@ -26,7 +26,7 @@
         <!-- SELECT2 EXAMPLE -->
         <div class="card card-default">
           <div class="card-header">
-            <h3 class="card-title">Tambah Data Team MBS</h3>
+            <h3 class="card-title">Tambah Data Tim MBS</h3>
 
             <div class="card-tools">
               <button type="button" class="btn btn-tool" data-card-widget="collapse">
@@ -75,7 +75,9 @@
               <div class="float-right mt-3">
                 <button type="submit" class="btn btn-primary rounded-pill">Simpan</button>
               </form>
-              <button type="button" class="btn btn-danger rounded-pill">Kembali</button>
+              <a href="{{ route('admin/team') }}">
+                <button type="button" class="btn btn-danger rounded-pill">Kembali</button>
+              </a>  
             </div>
             </div>
           </div>

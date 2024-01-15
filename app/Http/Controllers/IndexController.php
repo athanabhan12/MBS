@@ -11,6 +11,8 @@ use App\Models\NonGoverment;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\Produk;
+use App\Models\Project;
+use App\Models\Partner;
 
 class IndexController extends Controller
 {
@@ -20,6 +22,8 @@ class IndexController extends Controller
         return view('admin/index', [
 
             'products_count' => Produk::count(),
+            'projects_count' => Project::count(),
+            'partner_count' => Partner::count(),
             // 'products' => Produk::where('id_categories', '1')->get(),
         ]);
     }

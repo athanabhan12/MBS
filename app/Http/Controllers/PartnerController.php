@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Partner;
+use App\Models\Jenis;
 use Illuminate\Http\Request;
 use DB;
 
@@ -15,12 +16,13 @@ class PartnerController extends Controller
     }
     public function create_partner()
     {
-         $partners = Partner::all();
+         $partners = Jenis::all();
          return view('admin/tambah_partner', compact('partners'));
     }
     public function store_partner(Request $request)
     {
         $partners                                     = new Partner;
+        $partners->id_partner                         = $request->id_partner;
         $partners->nama_partner                       = $request->nama_partner;
         if($request->file('gambar')) {
             $partners['gambar'] = $request->file('gambar')->store('post-images');

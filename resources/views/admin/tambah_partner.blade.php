@@ -12,8 +12,8 @@
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Advanced Form</li>
+              <li class="breadcrumb-item"><a href="{{ route('admin/index') }}">Home</a></li>
+              <li class="breadcrumb-item active">Tambah Partner</li>
             </ol>
           </div>
         </div>
@@ -55,16 +55,16 @@
                   <input type="file" class="form-control" name="gambar" id="gambar">
                 </div>
               </div>
-              {{-- <div class="col-md-12">
+              <div class="col-md-12">
                 <div class="form-group">
-                    <label>Jenis Client</label>
-                    <select name="id_tipes" class="form-control">
-                      @foreach ($project as $item)
-                          <option value="{{ $item->id }}">{{ $item->jenis_klien }}</option>
+                    <label>Jenis Partner</label>
+                    <select name="id_partner" class="form-control">
+                      @foreach ($partners as $item)
+                          <option value="{{ $item->id }}">{{ $item->jenis_partner }}</option>
                       @endforeach
                     </select>
                   </div>
-              </div> --}}
+              </div>
               <div class="float-right mt-3">
                 <button type="submit" class="btn btn-primary rounded-pill">Simpan</button>
             </form>

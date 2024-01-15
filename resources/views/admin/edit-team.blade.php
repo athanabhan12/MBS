@@ -12,8 +12,8 @@
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Advanced Form</li>
+              <li class="breadcrumb-item"><a href="{{ route('admin/index') }}">Beranda</a></li>
+              <li class="breadcrumb-item active">Ubah Data Team MBS</li>
             </ol>
           </div>
         </div>
@@ -76,7 +76,9 @@
                 <button type="submit" class="btn btn-primary rounded-pill">Simpan</button>
               </div>
             </form>
+          <a href="{{ route('admin/team') }}">
             <button type="button" class="btn btn-danger mt-3 rounded-pill ml-3">Kembali</button>
+          </a>
             </div>
           </div>
         </div>

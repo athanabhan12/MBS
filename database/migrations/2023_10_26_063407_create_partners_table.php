@@ -13,6 +13,8 @@ return new class extends Migration
     {
         Schema::create('partners', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('id_partner');
+            $table->string('nama_partner');
             $table->string('gambar');
             $table->timestamps();
         });

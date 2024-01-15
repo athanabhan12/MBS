@@ -49,7 +49,7 @@
                     <td>{{ $item->nama_partner }}</td>
                     <td class="text-center"><img src="{{ asset('storage/' . $item->gambar) }}" width="70px" alt=""></td>
                     <td class="text-center">
-                      <a href="{{ url('/team/edit_partner') }}/{{ $item->id }}">
+                      <a href="{{ url('/partner/edit_partner') }}/{{ $item->id }}">
                         <button type="button" class="btn btn-primary">Edit</button>
                       </a>
                   </td>

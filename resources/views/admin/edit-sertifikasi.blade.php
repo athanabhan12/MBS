@@ -59,7 +59,7 @@
                 <button type="submit" class="btn btn-primary rounded-pill">Simpan</button>
               </div>
             </form>
-            <a href="{{ route('admin/education') }}">
+            <a href="{{ route('admin/sertifikasi') }}">
               <button type="button" class="btn btn-danger mt-3 rounded-pill ml-3">Kembali</button>
             </a>
             </div>

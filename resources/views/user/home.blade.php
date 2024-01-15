@@ -33,13 +33,46 @@
                   <div class="social">
                     <a href=""><i class="bi bi-twitter"></i></a>
                     <a href=""><i class="bi bi-facebook"></i></a>
-                    <a href="https://www.instagram.com/a__sopyan/"><i class="bi bi-instagram"></i></a>
+                    <a href="https://www.instagram.com/{{$item->instagram}}/" target="_blank"><i class="bi bi-instagram"></i></a>
                     <a href="whatsapp://send?text=Halo mbsonline.id, saya tertarik dengan produk/services : ...&phone=+62{{$item->whatsapp}}"><i class="bi bi-whatsapp"></i></a>
                   </div>
                 </div>
               </div>
             </div>
             @endforeach
+          </div>
+        </div>
+        <div id="tim">
+          <div class="section-header">
+            <h2>Sertifikasi Kami</h2>
+          </div>
+          <div class="row">
+            <div id="carouselExampleCaptions" class="carousel slide">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              </div>
+              @foreach($sertifikat as $item)
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="{{ asset('storage/' . $item->image) }}" class="d-block" style="width: 100%" alt="...">
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5>First slide label</h5>
+                    <p>Some representative placeholder content for the first slide.</p>
+                  </div>
+                </div>
+              </div>
+              @endforeach
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
           </div>
         </div>
         </div>
@@ -116,42 +149,25 @@
           <h2>Platform Partnership</h2>
           <div class="clients-slider swiper" data-aos="fade-up" data-aos-delay="100">
           <div class="swiper-wrapper align-items-center">
-            @foreach($partner as $item)
+
+            @foreach($ecommerce as $item)
             <div class="swiper-slide"><a href=""><img src="{{ asset('storage/' . $item->gambar) }}" alt=""></a></div>  
             @endforeach 
+
           </div>
           <div class="swiper-pagination"></div>
         </div>
-        </div>
-
-        <div class="clients-slider swiper" data-aos="fade-up" data-aos-delay="100">
+          <div class="clients-slider swiper" data-aos="fade-up" data-aos-delay="100">
           <div class="swiper-wrapper align-items-center">
-            <div class="swiper-slide"><img src="assets/img/clients/hp-enterprise.jpg" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/dell.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/lenovo.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/ibm.jpg" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/nutanix.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/hp.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/asus.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/avita.webp" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/acer.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/axioo.webp" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/aruba.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/cisco.jpg" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/mikrotik.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/tp-link.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/microsoft.jpg" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/vmware.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/kaspersky.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/sophos.webp" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/epson.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/canon.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/hik.jpg" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/dahua.png" class="img-fluid" alt=""></div>
+
+            @foreach($produk as $item)
+            <div class="swiper-slide"><a href=""><img src="{{ asset('storage/' . $item->gambar) }}" alt=""></a></div>  
+            @endforeach 
+
           </div>
           <div class="swiper-pagination"></div>
         </div>
-
+        </div>
       </div>
     </section><!-- End Services Section -->
 

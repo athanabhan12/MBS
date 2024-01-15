@@ -6,14 +6,15 @@ use Illuminate\Http\Request;
 use App\Models\Tim;
 use App\Models\Partner;
 use App\Models\Project;
+use App\Models\Sertifikasi;
 use DB;
 
 class HomeController extends Controller
 {
     public function index() 
     {
-        $tim  = Tim::all();      
-        $partner = Partner::all();
+        $tim        = Tim::all();   
+        $sertifikat = Sertifikasi::all();        
         
         //EDUCATION
         $tipeId = 1;
@@ -40,12 +41,26 @@ class HomeController extends Controller
         $non_goverment = Project::whereHas('tipes', function ($query) use ($tipeId) {
             $query->where('id', $tipeId);
         })->get();
+
         //HOSPITAL
         $tipeId = 5;
 
         $hospital = Project::whereHas('tipes', function ($query) use ($tipeId) {
             $query->where('id', $tipeId);
         })->get();
-        return view('/user/home', compact('tim', 'partner', 'education','fb','goverment','non_goverment','hospital'));
+
+        $tipeId = 1;
+
+        $ecommerce = Partner::whereHas('jenis', function ($query) use ($tipeId) {
+            $query->where('id', $tipeId);
+        })->get();
+
+        $tipeId = 2;
+
+        $produk = Partner::whereHas('jenis', function ($query) use ($tipeId) {
+            $query->where('id', $tipeId);
+        })->get();
+
+        return view('/user/home', compact('tim','education','fb','goverment','non_goverment','hospital','ecommerce','produk','sertifikat'));
     }
 }

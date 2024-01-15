@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>www.MBSonline.id | IT Solution Provider</title>
+  <title>www.MBSonline.id | IT Consultant Provider</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="../../https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -120,6 +120,14 @@
             </a>
           </li>
           <li class="nav-item">
+            <a href="{{ route('admin/pengguna') }}" class="nav-link">
+              <i class="nav-icon fa-solid fa-user"></i>
+              <p>
+                User
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
             <a href="{{ route('admin/partner') }}" class="nav-link">
                 <i class="nav-icon fa-solid fa-handshake-angle"></i>
               <p>
@@ -134,6 +142,29 @@
                 Sertifikasi
               </p>
             </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fa-solid fa-list"></i>
+              <p>
+                Categories
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{{ route('admin/produk') }}" class="nav-link">
+                    <i class="fa-solid fa-database"></i>
+                  <p>Produk</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{ route('admin/project') }}" class="nav-link">
+                    <i class="fa-solid fa-bars-progress"></i>
+                  <p>Project Reference</p>
+                </a>
+              </li>
+            </ul>
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link">
@@ -258,6 +289,17 @@
                 </a>
               </li>
             </ul>
+          </li>
+          <li class="nav-item mt-4">
+            <form action="/logout" method="POST">
+              @csrf
+              <button type="submit" class="nav-link">
+                <i class="nav-icon fa-solid fa-right-from-bracket"></i>
+              <p>
+               Logout
+              </p>
+              </button>
+            </form>
           </li>
       </nav>
       <!-- /.sidebar-menu -->
