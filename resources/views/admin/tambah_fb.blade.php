@@ -42,17 +42,10 @@
             <form action="{{ url('/FB/store_fb') }}" method="POST" enctype="multipart/form-data">
               @csrf
             <div class="row">
-              <div class="col-md-6">
+              <div class="col-md-12">
                 <div class="form-group">
                   <label>Nama Client</label>
                   <input type="text" name="nama_klien" class="form-control" placeholder="Nama Client">
-                </div>
-              </div>
-              <!-- /.col -->
-              <div class="col-md-6">
-                <div class="form-group">
-                  <label>Alamat</label>
-                  <input type="text" class="form-control" name="alamat_klien" placeholder="Alamat Client">
                 </div>
               </div>
               <div class="col-md-12">

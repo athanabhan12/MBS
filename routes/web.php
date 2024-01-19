@@ -33,7 +33,6 @@ use App\Models\Sertifikasi;
 Route::get('/', function () {
     $tim                    = Tim::all();
     $sertifikat             = Sertifikasi::all();
-    $compro                 = Compro::all();
     $education              = Project::where('id_tipes', 1)->get();
     $fb                     = Project::where('id_tipes', 2)->get();
     $goverment              = Project::where('id_tipes', 3)->get();

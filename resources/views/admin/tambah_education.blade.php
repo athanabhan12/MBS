@@ -42,17 +42,10 @@
             <form action="{{ url('/education/store_education') }}" method="POST" enctype="multipart/form-data">
               @csrf
             <div class="row">
-              <div class="col-md-6">
+              <div class="col-md-12">
                 <div class="form-group">
                   <label>Nama Klien</label>
                   <input type="text" name="nama_klien" class="form-control" placeholder="Nama Klien">
-                </div>
-              </div>
-              <!-- /.col -->
-              <div class="col-md-6">
-                <div class="form-group">
-                  <label>Alamat</label>
-                  <input type="text" class="form-control" name="alamat_klien" placeholder="Alamat">
                 </div>
               </div>
               <div class="col-md-12">

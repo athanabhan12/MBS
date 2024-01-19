@@ -42,18 +42,11 @@
             <form action="{{ url('/hospital/update_hospital') }}/{{ $project->id }}" method="POST">
               @csrf
             <div class="row">
-              <div class="col-md-6">
+              <div class="col-md-12">
                 <div class="form-group">
                   <label>Nama Klien</label>
                   <input type="text" name="nama_klien" class="form-control" placeholder="Nama Client" value="{{ $project->nama_klien }}">
                 </div>
-              </div>
-              <!-- /.col -->
-              <div class="col-md-6">
-                <div class="form-group">
-                  <label>Alamat</label>
-                  <input type="text" class="form-control" name="alamat_klien" placeholder="Alamat" value="{{ $project->alamat_klien }}">
-                </div> 
               </div>
               <div class="mt-3">
                 <button type="submit" class="btn btn-primary rounded-pill">Simpan</button>

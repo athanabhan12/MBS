@@ -48,13 +48,6 @@
                   <input type="text" name="nama_klien" class="form-control" value="{{ $project->nama_klien }}">
                 </div>
               </div>
-              <!-- /.col -->
-              <div class="col-md-6">
-                <div class="form-group">
-                  <label>Alamat</label>
-                  <input type="text" class="form-control" name="alamat_klien" value="{{ $project->alamat_klien }}">
-                </div> 
-              </div>
               <div class="mt-3">
                 <button type="submit" class="btn btn-primary rounded-pill">Simpan</button>
               </div>

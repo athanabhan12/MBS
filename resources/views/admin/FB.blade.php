@@ -38,7 +38,6 @@
                   <tr>
                     <th class="text-center">No</th>
                     <th class="text-center">Nama Client</th>
-                    <th class="text-center">Alamat</th>
                     <th class="text-center">ACTION</th>
                   </tr>
                   </thead>
@@ -47,7 +46,6 @@
                   <tr>
                     <td class="text-center">{{ $loop->iteration }}</td>
                     <td>{{ $item->nama_klien }}</td>
-                    <td>{{ $item->alamat_klien }}</td>
                     <td class="text-center">
                       <a href="{{ url('/FB/edit_fb') }}/{{ $item->id }}">
                         <button type="button" class="btn btn-primary">Edit</button>
@@ -62,7 +60,6 @@
                   <tr>
                     <th class="text-center">No</th>
                     <th class="text-center">Nama Client</th>
-                    <th class="text-center">Alamat</th>
                     <th class="text-center">ACTION</th>
                   </tr>
                 </tbody>

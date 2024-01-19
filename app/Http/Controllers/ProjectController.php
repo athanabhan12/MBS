@@ -27,7 +27,6 @@ class ProjectController extends Controller
         $project                                    = new Project;
         $project->id_tipes                          = $request->id_tipes;
         $project->nama_klien                        = $request->nama_klien;
-        $project->alamat_klien                      = $request->alamat_klien;
         $project->save();
          
         return redirect('education');
@@ -42,7 +41,6 @@ class ProjectController extends Controller
     {
         $project                                    = Project::find($id);
         $project->nama_klien                        = $request->nama_klien;
-        $project->alamat_klien                      = $request->alamat_klien;
 
         $project->save();
         
@@ -72,7 +70,6 @@ class ProjectController extends Controller
         $project                                    = new Project;
         $project->id_tipes                          = $request->id_tipes;
         $project->nama_klien                        = $request->nama_klien;
-        $project->alamat_klien                      = $request->alamat_klien;
         $project->save();
          
         return redirect('FB');
@@ -87,7 +84,6 @@ class ProjectController extends Controller
     {
         $project                                    = Project::find($id);
         $project->nama_klien                        = $request->nama_klien;
-        $project->alamat_klien                      = $request->alamat_klien;
 
         $project->save();
         
@@ -117,7 +113,6 @@ class ProjectController extends Controller
         $project                                    = new Project;
         $project->id_tipes                          = $request->id_tipes;
         $project->nama_klien                        = $request->nama_klien;
-        $project->alamat_klien                      = $request->alamat_klien;
         $project->save();
          
         return redirect('goverment');
@@ -132,7 +127,6 @@ class ProjectController extends Controller
     {
         $project                                    = Project::find($id);
         $project->nama_klien                        = $request->nama_klien;
-        $project->alamat_klien                      = $request->alamat_klien;
 
         $project->save();
         
@@ -162,7 +156,6 @@ class ProjectController extends Controller
         $project                                    = new Project;
         $project->id_tipes                          = $request->id_tipes;
         $project->nama_klien                        = $request->nama_klien;
-        $project->alamat_klien                      = $request->alamat_klien;
         $project->save();
          
         return redirect('non_goverment');
@@ -177,7 +170,6 @@ class ProjectController extends Controller
     {
         $project                                    = Project::find($id);
         $project->nama_klien                        = $request->nama_klien;
-        $project->alamat_klien                      = $request->alamat_klien;
 
         $project->save();
         
@@ -207,7 +199,6 @@ class ProjectController extends Controller
         $project                                    = new Project;
         $project->id_tipes                          = $request->id_tipes;
         $project->nama_klien                        = $request->nama_klien;
-        $project->alamat_klien                      = $request->alamat_klien;
         $project->save();
          
         return redirect('hospital');
@@ -221,7 +212,6 @@ class ProjectController extends Controller
     {
         $project                                    = Project::find($id);
         $project->nama_klien                        = $request->nama_klien;
-        $project->alamat_klien                      = $request->alamat_klien;
 
         $project->save();
         

@@ -42,24 +42,17 @@
             <form action="{{ url('/non_goverment/update_non_goverment') }}/{{ $project->id }}" method="POST">
               @csrf
             <div class="row">
-              <div class="col-md-6">
+              <div class="col-md-12">
                 <div class="form-group">
                   <label>Nama Client</label>
                   <input type="text" name="nama_klien" class="form-control" value="{{ $project->nama_klien }}">
                 </div>
               </div>
-              <!-- /.col -->
-              <div class="col-md-6">
-                <div class="form-group">
-                  <label>Alamat</label>
-                  <input type="text" class="form-control" name="alamat_klien" value="{{ $project->alamat_klien }}">
-                </div> 
-              </div>
               <div class="mt-3">
                 <button type="submit" class="btn btn-primary rounded-pill">Simpan</button>
               </div>
             </form>
-            <a href="{{ route('admin/education') }}">
+            <a href="{{ route('admin/non_goverment') }}">
               <button type="button" class="btn btn-danger mt-3 rounded-pill ml-3">Kembali</button>
             </a>
             </div>
