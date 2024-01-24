@@ -36,7 +36,7 @@
           </div>
         </div>
         <div class="col-12 col-lg-8 portfolio-description portfolio-info">
-            <h2>Spesifikasi</h2>
+            <h2>Fungsi</h2>
             <p>
               {{ $network_user->spesifikasi }}
             </p>

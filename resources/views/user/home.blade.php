@@ -145,29 +145,29 @@
           </div>
 
         </div>
-        <div class="section-header" style="margin-top: 5%;">
-          <h2>Platform Partnership</h2>
-          <div class="clients-slider swiper" data-aos="fade-up" data-aos-delay="100">
-          <div class="swiper-wrapper align-items-center">
+          <div class="section-header" style="margin-top: 5%;">
+            <h2>Platform Partnership</h2>
+            <div class="clients-slider swiper" data-aos="fade-up" data-aos-delay="100">
+            <div class="swiper-wrapper align-items-center">
 
-            @foreach($ecommerce as $item)
-            <div class="swiper-slide"><a href=""><img src="{{ asset('storage/' . $item->gambar) }}" alt=""></a></div>  
-            @endforeach 
+              @foreach($ecommerce as $item)
+              <div class="swiper-slide"><a href=""><img src="{{ asset('storage/' . $item->gambar) }}" alt=""></a></div>  
+              @endforeach 
 
+            </div>
+            <div class="swiper-pagination"></div>
           </div>
-          <div class="swiper-pagination"></div>
-        </div>
-          <div class="clients-slider swiper" data-aos="fade-up" data-aos-delay="100">
-          <div class="swiper-wrapper align-items-center">
+            <div class="clients-slider swiper" data-aos="fade-up" data-aos-delay="100">
+            <div class="swiper-wrapper align-items-center">
 
-            @foreach($produk as $item)
-            <div class="swiper-slide"><a href=""><img src="{{ asset('storage/' . $item->gambar) }}" alt=""></a></div>  
-            @endforeach 
+              @foreach($produk as $item)
+              <div class="swiper-slide"><a href=""><img src="{{ asset('storage/' . $item->gambar) }}" alt=""></a></div>  
+              @endforeach 
 
+            </div>
+            <div class="swiper-pagination"></div>
           </div>
-          <div class="swiper-pagination"></div>
-        </div>
-        </div>
+          </div>
       </div>
     </section><!-- End Services Section -->
 
